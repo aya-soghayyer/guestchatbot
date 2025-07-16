@@ -1,0 +1,43 @@
+.bg-custom {
+  background-image: url('../src/assets/Frame\ 1\ \(2\).png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px; /* Set width */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #2d3748; /* Dark background */
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #4a5568; /* Darker thumb */
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #718096; /* Lighter on hover */
+}
+
+/* Custom Scrollbar for Admin */
+.custom-scrollbar-admin::-webkit-scrollbar {
+  width: 3px; /* Set width */
+}
+
+.custom-scrollbar-admin::-webkit-scrollbar-track {
+  background: #ffffffae; /* Dark background */
+  border-radius: 10px;
+}
+
+.custom-scrollbar-admin::-webkit-scrollbar-thumb {
+  background: #ffffff; /* Darker thumb */
+  border-radius: 10px;
+}
+
+.custom-scrollbar-admin::-webkit-scrollbar-thumb:hover {
+  background: #718096;
+}
