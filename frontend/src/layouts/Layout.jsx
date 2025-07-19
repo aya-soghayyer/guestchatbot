@@ -9,7 +9,6 @@ function Layout() {
   const location = useLocation()
   const navbars = {
     '/': <GuestNav />,
-  
   }
 
   const footer = {
@@ -24,7 +23,7 @@ function Layout() {
   }
   return (
     <>
-      <div className="z-30 flex flex-col  bg-light-green font-Outfit">
+      <div className="flex flex-col h-screen  bg-gradient-to-r from-light-green via-mid-green to-dark-greenn font-Outfit">
         {/* <div className="z-50"> */}
         {navbars[location.pathname]}
         {/* </div> */}

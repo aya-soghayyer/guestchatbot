@@ -7,7 +7,6 @@ import GuestChat from './views/guestChat.jsx'
 import { useState } from 'react'
 import Layout from './layouts/Layout.jsx'
 
-
 export let domainName = 'http://localhost:8000/'
 // 18.208.251.97
 function App() {
@@ -16,7 +15,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Layout/>,
+      element: <Layout />,
       // errorElement: <NotFound />, // way for showing error when user write a path outside of the project rand of paths , example: localhost.../register
       children: [
         {

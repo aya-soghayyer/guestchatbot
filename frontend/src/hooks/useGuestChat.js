@@ -48,25 +48,53 @@ export const useGuestChat = (
 
     const userMessage = MessageFactory.createUserMessage(inputValue)
     setMessages((prev) => [...prev, userMessage])
+    function getLast3QAPairs(messages) {
+      const pairs = []
+
+      for (let i = messages.length - 1; i > 0; i--) {
+        const current = messages[i]
+        const previous = messages[i - 1]
+
+        if (current.type === 'bot' && previous?.type === 'user') {
+          pairs.unshift({
+            question: previous.text,
+            answer: current.text,
+          })
+          i-- // skip over the used user message
+        }
+
+        if (pairs.length === 3) break
+      }
+
+      return pairs
+    }
+
+    const historyPairs = getLast3QAPairs(messages)
+
     setInputValue('')
     setIsLoading(true)
     setIsActiveChat(true)
 
     let streamedText = ''
     try {
-      await chatService.sendGuestMessage(inputValue, '', (chunk) => {
-        streamedText += chunk
-        const botMessage = MessageFactory.createBotMessage(streamedText)
-        setMessages((prev) => {
-          const updated = [...prev]
-          if (updated[updated.length - 1]?.sender === 'bot') {
-            updated[updated.length - 1] = botMessage
-          } else {
-            updated.push(botMessage)
-          }
-          return updated
-        })
-      })
+      await chatService.sendGuestMessage(
+        historyPairs,
+        inputValue,
+        '',
+        (chunk) => {
+          streamedText += chunk
+          const botMessage = MessageFactory.createBotMessage(streamedText)
+          setMessages((prev) => {
+            const updated = [...prev]
+            if (updated[updated.length - 1]?.sender === 'bot') {
+              updated[updated.length - 1] = botMessage
+            } else {
+              updated.push(botMessage)
+            }
+            return updated
+          })
+        }
+      )
     } catch (error) {
       console.error('Error sending message:', error)
       const errorMessage = MessageFactory.createBotMessage(

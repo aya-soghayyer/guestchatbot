@@ -2,7 +2,12 @@
 import { domainName } from '../App'
 
 class ChatService {
-  async sendGuestMessage(message, chatId = '', onStreamUpdate = () => {}) {
+  async sendGuestMessage(
+    historyPairs: string,
+    message: string,
+    chatId = '',
+    onStreamUpdate = () => {}
+  ) {
     try {
       const response = await fetch(`${domainName}guest/addmessage`, {
         method: 'POST',
@@ -10,7 +15,11 @@ class ChatService {
           Accept: 'application/json',
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ message, chat_id: chatId }),
+        body: JSON.stringify({
+          historyPairs,
+          message,
+          chat_id: chatId,
+        }),
       })
 
       if (!response.ok) throw new Error('Failed to send message')

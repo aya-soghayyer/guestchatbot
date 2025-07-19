@@ -32,14 +32,14 @@ function HeaderGuestChat() {
 
   return (
     <>
-      <div className="relative z-0 grid font-Outfit text-dark-green md:z-10 2xl:py-12">
+      <div className="h-[33rem] grid font-Outfit text-dark-green 2xl:py-12">
         {!activeChat ? (
-          <div className="relative z-10 mx-auto grid h-[33rem] w-full min-w-full gap-1 px-5 md:min-w-full md:gap-3 md:px-44 2xl:mt-20 2xl:max-w-5xl 2xl:gap-8">
+          <div className="mx-auto grid w-[80%] my-auto h-[70%] gap-1 px-5 bg-white bg-opacity-85  rounded-3xl md:gap-3 2xl:mt-20 2xl:max-w-5xl 2xl:gap-8">
             <h2 className="flex items-end justify-center text-2xl font-bold md:text-3xl 2xl:text-3xl">
               What can I help with?
             </h2>
-            <div className="h-1/2 space-y-3 md:space-y-4 2xl:space-y-6">
-              <div className="relative mx-4">
+            <div className="h-1/2 min-w-max mx-auto space-y-3 md:space-y-4 2xl:space-y-6">
+              <div className="min-w-full">
                 <ChatInput
                   inputValue={inputValue}
                   setInputValue={setInputValue}
@@ -52,7 +52,7 @@ function HeaderGuestChat() {
                   className="rounded-2xl bg-white/15 py-4"
                 />
               </div>
-              <div className="hidden space-y-3 text-dark-green md:inline-grid md:w-full md:space-y-4 md:px-24 2xl:space-y-5 2xl:p-4">
+              <div className="hidden w-full space-y-3 text-dark-green md:inline-grid md:w-full md:space-y-4  2xl:space-y-5 2xl:p-4">
                 <p className="text-sm text-dark-green md:text-base 2xl:text-lg">
                   Suggested questions:
                 </p>
@@ -62,7 +62,7 @@ function HeaderGuestChat() {
                       key={index}
                       value={question}
                       onClick={(e) => handleSuggestion(e.target.value)}
-                      className={`rounded-full bg-white bg-opacity-10 p-2 text-sm transition-colors hover:bg-white/20 md:p-3 md:px-1 md:text-sm 2xl:p-4 2xl:text-lg ${index === 2 ? 'mt-1 flex justify-center justify-self-center md:col-span-2' : ''}`}
+                      className={`rounded-full bg-dark-green bg-opacity-10 p-2 text-sm transition-colors hover:bg-white/20 md:p-3 md:px-1 md:text-sm 2xl:p-4 2xl:text-lg ${index === 2 ? 'mt-1 flex justify-center justify-self-center md:col-span-2' : ''}`}
                     >
                       {question}
                     </button>
@@ -73,7 +73,7 @@ function HeaderGuestChat() {
           </div>
         ) : (
           <div
-            className={`mx-auto grid h-screen min-h-[350px] w-full max-w-full grid-rows-[1fr_auto] items-end rounded-2xl pt-2 md:h-[33rem] md:min-h-[33rem] md:max-w-[80%] md:pt-3 2xl:min-h-[600px] 2xl:max-w-5xl 2xl:pt-4`}
+            className={`mx-auto  w-[80%] my-auto h-[70%] gap-1 bg-white bg-opacity-85 rounded-3xl grid min-h-[350px]  max-w-full grid-rows-[1fr_auto] items-end pt-2 md:h-[33rem] md:min-h-[33rem] md:max-w-[80%] md:pt-3 2xl:min-h-[600px] 2xl:max-w-5xl 2xl:pt-4`}
           >
             <ChatArea
               messages={messages}

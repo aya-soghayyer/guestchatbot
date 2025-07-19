@@ -67,13 +67,9 @@ function GuestNav() {
                   </Link>
                 </li>
                 <hr className="mx-auto w-3/4 border-t border-white/30 2xl:mb-8" />
-                <li className="transition-transform duration-300 ease-out hover:scale-125">
-                  
-                </li>
+                <li className="transition-transform duration-300 ease-out hover:scale-125"></li>
                 <hr className="mx-auto w-3/4 border-t border-white/30 2xl:mb-8" />
-                <li className="transition-transform duration-300 ease-out hover:scale-125">
-                 
-                </li>
+                <li className="transition-transform duration-300 ease-out hover:scale-125"></li>
               </ul>
             </div>
           </div>
@@ -81,12 +77,8 @@ function GuestNav() {
 
         <div className="hidden md:inline-flex">
           <ul className="flex justify-between gap-3 md:-mr-3 md:mt-3 md:gap-0">
-            <li>
-            
-            </li>
-            <li>
-             
-            </li>
+            <li></li>
+            <li></li>
           </ul>
         </div>
       </div>
