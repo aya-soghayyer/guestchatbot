@@ -2,6 +2,7 @@
   "name": "frontend",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://aya-soghayyer.github.io/guestchatbot/",
   "type": "module",
   "scripts": {
     "watch-tailwind": "npx nodemon --watch src -e css,js,jsx --exec `npx tailwindcss -i ./src/index.css -o ./dist/output.css` ",
