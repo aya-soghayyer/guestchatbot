@@ -28,7 +28,7 @@ function Layout() {
         {navbars[location.pathname]}
         {/* </div> */}
         <div className="flex-1">
-          <Outlet className="z-40" />
+          <Outlet className="" />
         </div>
         <div className="bg-BgFooter text-white">
           {footer[location.pathname]}

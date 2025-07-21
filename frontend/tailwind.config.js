@@ -7,8 +7,12 @@ export default {
     },
     extend: {
       screens: {
-        "2md": "960px",
-      },
+        'mobile': '0px',      
+        'tablet': '640px',    
+        'laptop': '1024px',  
+        'desktop': '1280px',  
+        'extra-large': '1536px'},
+        
       colors: {
         "primary-background": "#F8FAF9",
         "light-green": "#C2EBC2",

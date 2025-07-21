@@ -25,7 +25,7 @@ const ChatInput = ({
   // const [pause] = useSound(micStop)
 
   return (
-    <div className="relative grid w-full">
+    <div className="relative grid w-full mobile:w-4/5 mobile:mx-auto tablet:w-[88%]     ">
       <SelectLanguageSpeak language={language} setLanguage={setLanguage} />
       <form
         onSubmit={handleSubmit}
@@ -34,7 +34,7 @@ const ChatInput = ({
         <input
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
-          className={`flex-auto rounded-2xl p-3 border-[1px] border-dark-green pl-4 pr-14 placeholder:text-mid-green text-sm md:text-lg ${isBotLoading ? 'cursor-not-allowed bg-gray-700' : 'bg-gray-800'} ${className}`}
+          className={`flex-auto rounded-2xl p-3 border-[1px] border-dark-green pl-4 pr-14 placeholder:text-mid-green text-sm tablet:text-lg ${isBotLoading ? 'cursor-not-allowed bg-gray-700' : 'bg-gray-800'} ${className}`}
           type="text"
           placeholder="Ask MiLo"
           disabled={isBotLoading}

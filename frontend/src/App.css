@@ -10,17 +10,17 @@
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: #2d3748; /* Dark background */
+  background: #c2ebc2;
   border-radius: 10px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #4a5568; /* Darker thumb */
+  background: #7abf7a; /* Darker thumb */
   border-radius: 10px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #718096; /* Lighter on hover */
+  background: #37a937; /* Lighter on hover */
 }
 
 /* Custom Scrollbar for Admin */
@@ -29,7 +29,7 @@
 }
 
 .custom-scrollbar-admin::-webkit-scrollbar-track {
-  background: #ffffffae; /* Dark background */
+  background: #37a937; /* Dark background */
   border-radius: 10px;
 }
 
@@ -39,5 +39,5 @@
 }
 
 .custom-scrollbar-admin::-webkit-scrollbar-thumb:hover {
-  background: #718096;
+  background: #c2ebc2;
 }
