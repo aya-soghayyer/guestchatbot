@@ -2,7 +2,7 @@
 import './App.css'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import GuestChat from './views/guestChat.jsx'
+import GuestChat from './views/GuestChat.jsx'
 // import NotFound from './views/NotFound'
 import { useState } from 'react'
 import Layout from './layouts/Layout.jsx'
