@@ -31,7 +31,11 @@ function App() {
   ])
   return (
     <>
+        <BrowserRouter basename="/guestchatbot">
+
       <RouterProvider router={router} />
+      </BrowserRouter>
+
     </>
   )
 }
