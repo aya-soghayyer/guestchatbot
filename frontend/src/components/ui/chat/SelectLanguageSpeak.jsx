@@ -14,12 +14,12 @@ function SelectLanguageSpeak({ language, setLanguage }) {
         id="language"
         value={language}
         onChange={(e) => setLanguage(e.target.value)}
-        className="h-8 w-fit rounded-2xl bg-primary bg-opacity-10 py-1 text-xs font-medium text-dark-green"
+        className="h-8 w-fit rounded-2xl bg-white/5 py-1 text-xs font-medium text-dark-green"
       >
-        <option value="en-US" className="bg-primary">
+        <option value="en-US" className="">
           EN
         </option>
-        <option value="ar-SA" className="bg-primary">
+        <option value="ar-SA" className="">
           AR
         </option>
       </select>

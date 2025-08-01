@@ -13,7 +13,7 @@ marked.setOptions({
 const ChatArea = ({ messages, messageEndRef, isLoading, className }) => {
   return (
     <div
-      className={`w-full overflow-y-auto p-3 md:p-0 md:px-7 ${className} custom-scrollbar relative max-h-[500px] mobile:max-h-[490px] tablet:max-h-[530px]`}
+      className={`w-full overflow-y-auto p-3 mobile:pt-20 extra-large:py-10 desktop:py-4 laptop:py-2 tablet:p-0 tablet:px-7 ${className} custom-scrollbar relative max-h-[500px] mobile:max-h-[490px] tablet:max-h-[530px]`}
     >
       {messages.map((msg, index) => (
         <div
@@ -23,7 +23,7 @@ const ChatArea = ({ messages, messageEndRef, isLoading, className }) => {
           }`}
         >
           {msg.sender !== 'user' && (
-            <div className="mr-2 h-10 w-10 md:h-12 md:w-12">
+            <div className="mr-2 h-10 w-10 tablet:h-12 tablet:w-12">
               <img
                 src={aiRobot}
                 alt="Bot Avatar"
@@ -33,7 +33,7 @@ const ChatArea = ({ messages, messageEndRef, isLoading, className }) => {
           )}
 
           <span
-            className={`prose prose-invert max-w-[80%] break-words p-3 text-sm md:text-base ${
+            className={`prose prose-invert max-w-[80%] break-words p-3 text-sm tablet:text-base ${
               msg.sender === 'user'
                 ? 'rounded-[30px] rounded-br-none bg-mid-green text-white'
                 : 'rounded-[30px] rounded-bl-none bg-dark-green text-white'
@@ -52,7 +52,7 @@ const ChatArea = ({ messages, messageEndRef, isLoading, className }) => {
           </span>
 
           {msg.sender === 'user' && (
-            <div className="ml-2 h-10 w-10 md:h-12 md:w-12">
+            <div className="ml-2 h-10 w-10 tablet:h-12 tablet:w-12">
               <img
                 src={user}
                 alt="User Avatar"

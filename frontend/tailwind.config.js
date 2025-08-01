@@ -16,7 +16,7 @@ export default {
       colors: {
         "primary-background": "#F8FAF9",
         "light-green": "#C2EBC2",
-        "mid-green": "#56C856",
+        "mid-greenn": "#56C856",
         "dark-greenn": "#37A937",
         "dark-green": "#008000",
         light: "white",
